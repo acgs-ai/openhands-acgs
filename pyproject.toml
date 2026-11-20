@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "openhands-acgs"
-version = "0.1.0"
+version = "0.2.0"
 description = "ACGS rule-based tool-call governance for OpenHands agents, via a security analyzer"
 readme = "README.md"
 requires-python = ">=3.12,<3.15"
@@ -25,7 +25,7 @@ classifiers = [
 ]
 dependencies = [
     "openhands-sdk>=1.54.0,<2",
-    "acgs-lite>=3.0.1,<4",
+    "acgs-lite>=3.0.1,<5",
 ]
 
 [project.urls]
@@ -127,6 +127,7 @@ filterwarnings = [
     "ignore::PendingDeprecationWarning",
     # Raised by pydantic for a litellm TypedDict that OpenHands builds its model responses from; not this package.
     "ignore:Item 'summary' on TypedDict class 'ChatCompletionReasoningItem':UserWarning",
+    "ignore:Item .* on TypedDict class 'ChatCompletion.*ThinkingBlock':UserWarning",
 ]
 
 [tool.coverage.run]
