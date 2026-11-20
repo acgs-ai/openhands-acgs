@@ -127,6 +127,7 @@ filterwarnings = [
     "ignore::PendingDeprecationWarning",
     # Raised by pydantic for a litellm TypedDict that OpenHands builds its model responses from; not this package.
     "ignore:Item 'summary' on TypedDict class 'ChatCompletionReasoningItem':UserWarning",
+    "ignore:Item .* on TypedDict class 'ChatCompletion.*ThinkingBlock':UserWarning",
 ]
 
 [tool.coverage.run]
